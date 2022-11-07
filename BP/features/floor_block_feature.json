@@ -1,0 +1,11 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "3008:floor_block_feature"
+        },
+        "places_block": "minecraft:concrete",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false
+    }
+}

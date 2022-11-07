@@ -1,0 +1,44 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "3008:overworld_sky_concrete_floor_feature",
+            "places_feature": "3008:floor_column_scatter_feature"
+        },
+        "conditions": {
+            "placement_pass": "final_pass",
+            "minecraft:biome_filter": {
+                "any_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "overworld_generation"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "overworld"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+            "iterations": 256,
+            "x": {
+                "distribution": "fixed_grid",
+                "extent": [
+                    0,
+                    15
+                ]
+            },
+            "y": 256,
+            "z": {
+                "distribution": "fixed_grid",
+                "extent": [
+                    0,
+                    15
+                ]
+            }
+        }
+    }
+}

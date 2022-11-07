@@ -1,0 +1,75 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Warhead"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.4.0"
+			],
+			"dash": [
+				"0.10.6"
+			]
+		}
+	},
+	"header": {
+		"name": "3008",
+		"description": "By Warhead",
+		"min_engine_version": [
+			1,
+			19,
+			40
+		],
+		"uuid": "4c96907c-ddf8-465d-8757-1b50d195c000",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "8ab6be17-4799-4919-a644-0b11b5daddea",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "b0d25cb5-4ddd-4186-af87-1162acf3d962",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "84548b56-90fc-4e91-b46d-364fb3010688",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.0.0-beta"
+		}
+	]
+}

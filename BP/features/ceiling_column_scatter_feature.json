@@ -1,0 +1,19 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "3008:ceiling_column_scatter_feature"
+        },
+        "places_feature": "3008:ceiling_block_feature",
+        "iterations": "v.column_lenght = 1 + math.random_integer(1, 1);return v.column_lenght;",
+        "x": 0,
+        "y": {
+            "distribution": "fixed_grid",
+            "extent": [
+                "1 - v.column_lenght",
+                0
+            ]
+        },
+        "z": 0
+    }
+}

@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Warhead"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.4.0"
+			],
+			"dash": [
+				"0.10.6"
+			]
+		}
+	},
+	"header": {
+		"name": "3008",
+		"description": "By Warhead",
+		"min_engine_version": [
+			1,
+			19,
+			40
+		],
+		"uuid": "84548b56-90fc-4e91-b46d-364fb3010688",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "7df28616-b758-4f8f-a90c-37261cf8a36e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "4c96907c-ddf8-465d-8757-1b50d195c000",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

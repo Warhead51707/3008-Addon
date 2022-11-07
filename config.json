@@ -1,0 +1,45 @@
+{
+	"type": "minecraftBedrock",
+	"name": "3008",
+	"namespace": "3008",
+	"authors": [
+		"Warhead"
+	],
+	"targetVersion": "1.19.40",
+	"description": "By Warhead",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": false,
+		"upcomingCreatorFeatures": true,
+		"enableGameTestFramework": true,
+		"experimentalMolangFeatures": true,
+		"educationEdition": false
+	},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "3008"
+				}
+			]
+		]
+	}
+}
