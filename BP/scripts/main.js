@@ -4,7 +4,7 @@ const overworld = world.getDimension('overworld')
 
 let loadedChunks = []
 
-const scale = 12
+const scale = 10
 
 const structures = [
     {
@@ -48,9 +48,19 @@ async function loadChunk(x, z) {
     ]
 
     await overworld.runCommandAsync(`structure load ${chosenStructure.structure} ${x * scale} ${y} ${z * scale} ${rotations[Math.floor(Math.random() * 4)]}`)
+
+    for (let sx = x * scale + 7; sx <= x * scale + 8; sx++) {
+        for (let sz = z * scale + 7; sz <= z * scale + 8; sz++) {
+            for (let sy = y + 28; sy <= y + 29; sy++) {
+                try {
+                    await overworld.runCommandAsync(`setblock ${sx} ${sy} ${sz} air`)
+                } catch { }
+            }
+        }
+    }
 }
 
-const distance = 12
+const distance = 6
 
 system.runSchedule(async () => {
     for (const player of world.getPlayers()) {
