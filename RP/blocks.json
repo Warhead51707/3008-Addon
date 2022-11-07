@@ -3,5 +3,9 @@
 		1,
 		1,
 		0
-	]
+	],
+	"3008:concrete": {
+		"sound": "stone",
+		"textures": "3008_concrete"
+	}
 }

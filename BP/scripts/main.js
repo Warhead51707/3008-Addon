@@ -8,17 +8,25 @@ const scale = 10
 
 const structures = [
     {
-        structure: "3008:test",
-        weight: 9
+        structure: "3008:pillar",
+        weight: 10
     },
     {
-        structure: "3008:pillar",
-        weight: 1
+        structure: "3008:beds",
+        weight: 35
+    },
+    {
+        structure: "3008:tables",
+        weight: 35
+    },
+    {
+        structure: "3008:rest_area",
+        weight: 20
     }
 ]
 
 async function loadChunk(x, z) {
-    const y = 257
+    const y = 256
 
     let totalWeight = 0
 
@@ -52,8 +60,17 @@ async function loadChunk(x, z) {
 
 const distance = 6
 
+let shouldPlayMusic = false
+
 system.runSchedule(async () => {
     for (const player of world.getPlayers()) {
+
+        if (!shouldPlayMusic) {
+            shouldPlayMusic = true
+
+            world.playMusic('music.day', { loop: true, volume: 0.5, fade: 1 })
+        }
+
         for (let x = -distance; x < distance; x++) {
             for (let z = -distance; z < distance; z++) {
                 const playerChunkPos = new BlockLocation(Math.floor(player.location.x / scale), Math.floor(player.location.y / scale), Math.floor(player.location.z / scale))
