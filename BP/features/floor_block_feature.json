@@ -4,7 +4,7 @@
         "description": {
             "identifier": "3008:floor_block_feature"
         },
-        "places_block": "minecraft:concrete",
+        "places_block": "3008:concrete",
         "enforce_placement_rules": false,
         "enforce_survivability_rules": false
     }
