@@ -1,4 +1,4 @@
-import { system, world, BlockLocation } from '@minecraft/server'
+import { world, BlockLocation } from '@minecraft/server'
 
 const overworld = world.getDimension('overworld')
 
@@ -52,7 +52,7 @@ async function loadChunk(x, z) {
 
 const distance = 6
 
-system.runSchedule(async () => {
+world.events.tick.subscribe(async () => {
     for (const player of world.getPlayers()) {
         for (let x = -distance; x < distance; x++) {
             for (let z = -distance; z < distance; z++) {
@@ -68,4 +68,4 @@ system.runSchedule(async () => {
             }
         }
     }
-}, 20)
+})
